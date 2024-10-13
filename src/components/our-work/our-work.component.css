@@ -1,0 +1,42 @@
+.platform-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.platform-column {
+  width: 100%;
+  max-width: 32%; /* Adjust this width for each column (1/3rd for 3 columns) */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.platform-column img {
+  width: 100%; /* Ensure images take full width of the container */
+  height: auto;
+  max-width: 200px; /* Set max-width for the images */
+  margin-bottom: 15px;
+}
+
+.platform-column h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.platform-column p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .platform-column {
+    max-width: 100%; /* Full-width for small screens */
+    margin-bottom: 20px;
+  }
+}

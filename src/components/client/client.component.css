@@ -1,0 +1,38 @@
+h1 span {
+  color: #93bf3e;
+}
+
+.elementor-button {
+  background-color: #93bf3e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.elementor-button:hover {
+  background-color: #7ca72f;
+}
+
+.content-section {
+  padding: 20px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.trusted-by-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.trusted-by-logos {
+  display: flex;
+  gap: 20px; /* Adjust the spacing as needed */
+}
+
+.trusted-by-logos img {
+  max-width: 190px;
+  height: auto;
+}

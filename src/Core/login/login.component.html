@@ -1,0 +1,48 @@
+<div class="bodys">
+  <div class="container">
+    <h2 class="title">{{ isLoginMode ? 'Login' : 'Register' }}</h2>
+    <form action="#" class="form-container">
+
+      <!-- Common fields for both forms -->
+      <div class="input-box email">
+        <input type="email" name="Username" [(ngModel)]="Username" id="email-input" required placeholder="Username">
+        <img src="https://cdn-icons-png.flaticon.com/512/6325/6325109.png" alt="user-image" width="25px">
+      </div>
+
+      <!-- Password field -->
+      <div class="input-box password">
+        <input type="password" name="Password" [(ngModel)]="password" id="password-input" required
+          placeholder="Password">
+        <img src="https://cdn-icons-png.flaticon.com/512/2489/2489659.png" alt="lock-image" width="22px">
+      </div>
+
+      <!-- Extra field for Register (only visible during registration) -->
+      <div class="input-box confirm-password" *ngIf="!isLoginMode">
+        <input type="password" name="ConfirmPassword" [(ngModel)]="confirmPassword" id="confirm-password-input" required
+          placeholder="Confirm Password">
+        <img src="https://cdn-icons-png.flaticon.com/512/2489/2489659.png" alt="lock-image" width="22px">
+      </div>
+
+      <!-- Remember me & Forgot password (visible in login mode only) -->
+      <div class="remember-forgot" *ngIf="isLoginMode">
+        <div class="remember">
+          <input type="checkbox" id="remember">
+          <label for="remember">Remember me</label>
+        </div>
+        <div class="forgot">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+
+      <div class="button">
+        <button class="login" (click)="onSubmit()">{{ isLoginMode ? 'Login' : 'Register' }}</button>
+      </div>
+
+      <div class="register">
+        <p>{{ isLoginMode ? "Don't have an account?" : "Already have an account?" }}
+          <a  (click)="toggleMode()">{{ isLoginMode ? 'Register' : 'Login' }}</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

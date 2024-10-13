@@ -1,0 +1,27 @@
+.video-container {
+  position: relative;
+  width: 100%; /* Full width container */
+  max-width: 600px; /* You can change this to whatever width you need */
+  margin: 0 auto; /* Center the video */
+}
+
+.video-container img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any inline styles */
+}
+
+.video-container button.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-image: url('https://path-to-your-play-icon.png'); /* You can use your custom play icon */
+  background-size: cover;
+  z-index: 1;
+}

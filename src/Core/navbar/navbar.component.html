@@ -1,0 +1,119 @@
+<nav class="navbar navbar-expand-lg fixed" data-bs-theme="">
+  <div class="container-fluid">
+    <img width="300" height="71" src="https://www.rupeeseed.com/wp-content/uploads/2023/12/Rupee-logo-1-300x71.png"
+      class="attachment-medium size-medium wp-image-9786 webpexpress-processed entered lazyloaded"
+      alt="Rupeeseed technology ventures" style="width:100%;height:23.53%;max-width:169px"
+      data-lazy-src="https://www.rupeeseed.com/wp-content/uploads/2023/12/Rupee-logo-1-300x71.png"
+      data-ll-status="loaded">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link custom-bold" routerLink="home">Home</a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a class="nav-link custom-bold" routerLink="about">About</a>
+        </li>
+
+        <!-- Our Work Link -->
+        <li class="nav-item">
+          <a class="nav-link custom-bold" routerLink="ourwork">Our Work</a>
+        </li>
+
+
+
+        <!-- Client Link -->
+        <li class="nav-item">
+          <a class="nav-link custom-bold" routerLink="client">Client</a>
+        </li>
+
+        <!-- Events Link -->
+        <!-- <li class="nav-item">
+          <a class="nav-link custom-bold" routerLink="event">Events</a>
+        </li>
+
+         Blogs Link
+        <li class="nav-item">
+          <a class="nav-link custom-bold" routerLink="blog">Blogs</a>
+        </li> -->
+
+        <!-- Careers Link -->
+        <li class="nav-item">
+          <a class="nav-link custom-bold" (click)="oncareer()">Careers</a>
+        </li>
+
+        <!-- Contact Link -->
+        <li class="nav-item">
+          <a class="nav-link custom-bold" routerLink="contact">Contact</a>
+        </li>
+      </ul>
+      <button (click)="onlogout()" class="btn btn-outline-danger custom-bold d-flex ms-auto" type="submit">Log
+        Out</button>
+
+    </div>
+  </div>
+</nav>
+
+<div class="containar">
+  <hr>
+  <router-outlet></router-outlet>
+  <hr>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Company Info -->
+      <div class="col-md-4">
+        <a href="/">
+          <img src="https://www.rupeeseed.com/wp-content/uploads/2023/12/Rupee-logo-1a.png" alt="Rupeeseed Logo"
+            class="img-fluid mb-3" style="max-width: 200px;">
+        </a>
+        <p>Unit No. 308, A wing, Western Edge – II,<br>
+          Near Western Express Highway,<br>
+          Borivali East, Mumbai – 400 066</p>
+        <div class="social-icons">
+          <a href="http://linkedin.com/company/rupeeseed-technology-ventures-pvt-ltd/" target="_blank"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/Rupeeseed" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/channel/UCi8JVMgBkaR6FGkbRQK4AAQ" target="_blank"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/rupeeseedtech/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Products Links -->
+      <div class="col-md-4">
+        <h2>Products</h2>
+        <ul class="list-unstyled">
+          <li><a href="https://www.rupeeseed.com/mobirupee/">MobiRupee</a></li>
+          <li><a href="https://www.rupeeseed.com/rapidrupee/">RapidRupee</a></li>
+          <li><a href="https://www.rupeeseed.com/rupee-mf/">Rupee MF</a></li>
+          <li><a href="https://www.rupeeseed.com/rupeeoms/">RupeeOMS</a></li>
+          <li><a href="https://www.rupeeseed.com/rupeerms/">RupeeRMS</a></li>
+          <li><a href="https://www.rupeeseed.com/rupeerobo/">RupeeRobo</a></li>
+          <li><a href="https://www.rupeeseed.com/rupeewealth/">RupeeWealth</a></li>
+          <li><a href="https://www.rupeeseed.com/rupeeweb/">RupeeWeb</a></li>
+        </ul>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-md-4">
+        <h2>Useful Links</h2>
+        <ul class="list-unstyled">
+          <li><a routerLink="about">About</a></li>
+          <li><a routerLink="ourwork">Our Work</a></li>
+          <li><a routerLink="Product">Products</a></li>
+          <li><a routerLink="client">Clientele</a></li>
+          <li><a routerLink="event">Events</a></li>
+          <li><a routerLink="blog">Blogs</a></li>
+          <li><a routerLink="">Careers</a></li>
+          <li><a routerLink="contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
