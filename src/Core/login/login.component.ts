@@ -20,6 +20,7 @@ export class LoginComponent {
   // Used for register form
   errorMessage = '';
   isLoading = false;
+  // UsernameInput: any;
   constructor(private router: Router) { }
   // router = inject(Router)
 
@@ -50,23 +51,38 @@ export class LoginComponent {
       } else {
         alert('Invalid Credentials'); // Alert for invalid credentials
       }
+    } else {
+      alert('Please Enter Username and password correctly!');
     }
   }
   registerUser() {
+    debugger;
     const userObj = {
       Username: this.Username,
       password: this.password,
     };
     debugger;
-    if (this.password !== this.confirmPassword) {
-      alert('Passwords do not match!');
-      return;
+    if (this.Username && this.password && this.confirmPassword) { // Check if fields are not null or empty
+      if (this.password === this.confirmPassword) {
+        const userObj = {
+          Username: this.Username,
+          password: this.password,
+          confirmPassword: this.confirmPassword
+        };
+
+        const userbojdata = JSON.stringify(userObj);
+        sessionStorage.setItem('userdata', userbojdata);
+        // Optionally navigate to the login page
+        // this.router.navigateByUrl('/login');
+        this.isLoginMode = !this.isLoginMode; // Toggle to login mode
+      } else {
+        alert('Passwords do not match!');
+      }
+    } else {
+      alert('Please fill in all fields!'); // Alert for null or empty values
     }
 
-    const userbojdata = JSON.stringify(userObj);
-    sessionStorage.setItem('userdata', userbojdata);
-    // this.router.navigateByUrl('/login');
-    this.isLoginMode = !this.isLoginMode;
+
 
   }
 

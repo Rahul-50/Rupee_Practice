@@ -16,6 +16,7 @@
             "outputPath": "dist/rupee-practice",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/Rupee_Practice/",
             "polyfills": [
               "zone.js"
             ],
